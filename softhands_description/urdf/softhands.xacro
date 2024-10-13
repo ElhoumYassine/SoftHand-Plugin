@@ -51,7 +51,7 @@
 		<xacro:include filename="$(find softhands_description)/urdf/xacro/include/macro/plugin.xacro"/>
 
 		<!-- If you are using only the hand -->
-		<link name="world"/>
+		<!-- <link name="world"/> -->
 
 		<!-- IF VERSION == 1_2_Research -->
 		<xacro:if value="${version == 'v1_2_research'}">
@@ -95,7 +95,7 @@
 			<xacro:v1_wide 
 				side="right" 
 				parent="world" 
-				position=" 0 0.2 0.02"  
+				position="0 0.2 0.02"  
 				orientation="${orientation}" 
 				fixed_hands="false">
 			</xacro:v1_wide>
@@ -108,19 +108,19 @@
 			<xacro:include filename="$(find softhands_description)/urdf/xacro/v3.xacro"/>
 
 			
-			<xacro:v3
+			<!-- <xacro:v3
 				side="left"
 				parent="world" 
-				position="0.2 0 0.2" 
-				orientation="1.57 0 3.14" 
+				position="0 -0.2 0.02" 
+				orientation="${orientation}" 
 				fixed_hands="false">
-			</xacro:v3>
+			</xacro:v1_wide> -->
 
 			<xacro:v3 
 				side="right" 
-				parent="world" 
-				position="0 0 0.2"  
-				orientation="1.57 0 0" 
+				parent="right_wrist" 
+				position="0.015 -0.088 0.01"  
+				orientation="${orientation}" 
 				fixed_hands="false">
 			</xacro:v3>
 		</xacro:if>	

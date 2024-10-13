@@ -38,13 +38,13 @@
 -->
 
 <robot name="softhand" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  	<xacro:arg name="sh_version" default="v1_2_research"/>
+  	<xacro:arg name="sh_version" default="v3"/>
 	
     <xacro:include filename="$(find softhands_description)/urdf/softhands.xacro"/>
     <xacro:softhands 
         version="$(arg sh_version)"
         position="0 0 0" 
-        orientation="0 0 0" 
+        orientation="3.14 1.57 0" 
         fixed_hands="false">
     </xacro:softhands>
 
